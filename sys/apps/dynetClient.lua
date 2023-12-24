@@ -138,7 +138,7 @@ function renderGUI()
 	--draw left bar
 	term.setTextColor(colours.white)
 	term.setBackgroundColor(colours.lightGrey)
-	for line=1,18 do
+	for line=1,17 do
 		term.setCursorPos(1,line)
 		term.write(" ")
 	end
@@ -150,16 +150,16 @@ function renderGUI()
 	end
 	--draw bottom bar
 	term.setBackgroundColor(colours.lightGrey)
-	term.setCursorPos(1,19)
+	term.setCursorPos(1,18)
 	for line=1,51 do
 		term.write(" ")
 	end
 	--term.setCursorPos(1,19)
 	--term.write(siteName..pageName)
 	--draw menu bar items
-	drawButton(42,19,"Aktulizovat",currentX,3,menuMode)
-	drawButton(36,19,"Menu",currentX,2,menuMode)
-	drawButton(1,19,siteName..pageName,currentX,1,menuMode)
+	drawButton(42,18,"Aktulizovat",currentX,3,menuMode)
+	drawButton(36,18,"Menu",currentX,2,menuMode)
+	drawButton(1,18,siteName..pageName,currentX,1,menuMode)
 end
 
 function popup(text)--a nice GUI popup asking for text
@@ -363,7 +363,7 @@ while true do
 		end
 		renderGUI()
 	elseif event=="mouse_click" then
-		if p3==19 then
+		if p3==18 then
 			menuMode=true
 			currentX=1--default if below is false
 			if p2>36 then currentX=2 end
